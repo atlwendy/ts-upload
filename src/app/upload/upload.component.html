@@ -1,0 +1,18 @@
+<p>
+  upload works!
+</p>
+
+<form [formGroup]="stepForm" novalidate>
+
+  <ts-file-upload
+    [formControl]="getControl('file')"
+    [maximumKilobytesPerFile]=200
+    [accept]="mimeTypes"
+  >
+  </ts-file-upload>
+
+  <ts-button 
+    (clickEvent)="nextStep($event)"
+  >Submit</ts-button>
+
+</form>
